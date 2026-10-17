@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Pablo | Sitio Web Personal & Portafolio</title>
+  <meta name="description" content="Sitio web personal de Juan Pablo: 16 años, estudiante del Colegio María Currea Manrique, apasionado por el fútbol, sus gatos Michu y Mike, su familia y sus sueños.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+  <div class="glow-bg glow-3"></div>
+
+  <!-- Sound Toggle Float -->
+  <button id="soundToggleBtn" class="sound-toggle" aria-label="Activar o desactivar efectos de sonido" title="Efectos de sonido interactivos">
+    <svg class="sound-icon-on" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
+    <svg class="sound-icon-off" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+    <span class="sound-label">Sonido: ON</span>
+  </button>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-monogram">JP</span>
+        <span class="brand-text">Juan Pablo<span class="teal-dot">.</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+          <li><a href="#futbol" class="nav-link">Mi Pasión</a></li>
+          <li><a href="#mi-circulo" class="nav-link">Mi Círculo</a></li>
+          <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+          <li><a href="#metas" class="nav-link">Metas</a></li>
+          <li><a href="#interactivo" class="nav-link nav-highlight">Zona Interactiva</a></li>
+          <li><a href="#mensajes" class="nav-link">Mensajes</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#juego-penales" class="btn-nav">
+          <span class="nav-icon">⚽</span>
+          <span>¡Jugar Penales!</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-pulse"></span>
+            <span class="badge-text">Colegio María Currea Manrique • 16 Años</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hola, soy <br>
+            <span class="text-teal-gradient">Juan Pablo</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Futbolista de corazón, soñador incansable y apasionado por la velocidad y los retos. Vivo cada día con disciplina en la cancha, amor por mi familia, el amor de mi vida a quien conozco desde los 12 años, mis amigos y mis dos inseparables gatos Michu y Mike.
+          </p>
+
+          <div class="hero-tags">
+            <span class="tag-item">⚽ Sueño Pro</span>
+            <span class="tag-item">💖 El Amor de Mi Vida</span>
+            <span class="tag-item">🏎️ Ing. Automotriz</span>
+            <span class="tag-item">🎮 Xbox & FC 26</span>
+            <span class="tag-item">🐱 Michu & Mike</span>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#futbol" class="btn btn-primary">
+              <span>Descubrir mi pasión</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#juego-penales" class="btn btn-secondary">
+              <span>Desafío de Penales</span>
+              <span class="btn-emoji">🥅</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">16</span>
+              <span class="stat-desc">Años de edad</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">#7</span>
+              <span class="stat-desc">Dorsal en la cancha</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">2</span>
+              <span class="stat-desc">Amores felinos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-desc">Enfocado en mis metas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="photo-card-wrapper">
+            <div class="photo-card">
+              <div class="photo-glow"></div>
+              <img src="assets/images/perfil-espejo.jpg" alt="Juan Pablo con traje formal y corbata en el espejo" class="hero-photo" id="heroPhoto">
+              <div class="photo-overlay-tag">
+                <span class="dot-live"></span>
+                <span>Juan Pablo • 16 Años</span>
+              </div>
+            </div>
+
+            <!-- Floating feature cards around photo -->
+            <div class="floating-badge badge-top-right">
+              <span class="f-icon">⚽</span>
+              <div>
+                <strong>Futbolista</strong>
+                <small>Sueño profesional</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <span class="f-icon">🐱</span>
+              <div>
+                <strong>Michu & Mike</strong>
+                <small>Mis dos amores</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-mid-left">
+              <span class="f-icon">🏫</span>
+              <div>
+                <strong>Currea Manrique</strong>
+                <small>Estudiante</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ SECTION -->
+    <section class="section sobre-mi-section" id="sobre-mi">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Conóceme Más</span>
+          <h2 class="section-title">Quién es <span class="text-teal">Juan Pablo</span></h2>
+          <p class="section-description">
+            Una mirada a mi personalidad, mi día a día entre cuadernos, balones de fútbol y momentos inolvidables.
+          </p>
+        </div>
+
+        <div class="grid-2-col about-grid">
+          <div class="about-card-main">
+            <div class="about-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <h3>Mi Historia y Enfoque</h3>
+            <p>
+              Tengo <strong>16 años</strong> y actualmente curso mis estudios en el <strong>Colegio María Currea Manrique</strong>. Me caracterizo por ser una persona leal, alegre, dedicada y con objetivos muy claros. 
+            </p>
+            <p>
+              Creo firmemente en el poder de la constancia: levantarme cada día con la motivación de mejorar, ya sea aprendiendo en el colegio, entrenando duro en la cancha de fútbol o compartiendo risas que me llenan de energía con quienes más aprecio.
+            </p>
+            <div class="values-chips">
+              <span class="chip">⚡ Determinación</span>
+              <span class="chip">🤝 Lealtad</span>
+              <span class="chip">🎯 Disciplina</span>
+              <span class="chip">😄 Buena Vibra</span>
+            </div>
+          </div>
+
+          <div class="id-card-interactive" id="idCard">
+            <div class="id-card-header">
+              <span class="id-logo">CURREA MANRIQUE</span>
+              <span class="id-badge">CREDENCIAL 2026</span>
+            </div>
+            <div class="id-card-body">
+              <div class="id-avatar">
+                <img src="assets/images/perfil-espejo.jpg" alt="Foto carnet Juan Pablo">
+              </div>
+              <div class="id-info">
+                <h4>JUAN PABLO</h4>
+                <div class="id-data-row">
+                  <span class="data-label">Edad:</span>
+                  <span class="data-val">16 años</span>
+                </div>
+                <div class="id-data-row">
+                  <span class="data-label">Institución:</span>
+                  <span class="data-val">Col. María Currea Manrique</span>
+                </div>
+                <div class="id-data-row">
+                  <span class="data-label">Posición Deportiva:</span>
+                  <span class="data-val">Extremo / Delantero (#7)</span>
+                </div>
+                <div class="id-data-row">
+                  <span class="data-label">Meta Académica:</span>
+                  <span class="data-val">Ingeniería Automotriz</span>
+                </div>
+              </div>
+            </div>
+            <div class="id-card-footer">
+              <div class="barcode">||| | || |||| | ||| |||| | |</div>
+              <span class="id-verif">VERIFICADO • ESTUDIANTE & ATLETA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MI PASIÓN: EL FÚTBOL -->
+    <section class="section futbol-section" id="futbol">
+      <div class="container">
+        <div class="futbol-banner">
+          <div class="futbol-content">
+            <div class="badge-pill pill-teal">
+              <span>⚽ Mi Mayor Pasión</span>
+            </div>
+            <h2 class="futbol-title">
+              En la Cancha: <br>
+              <span class="text-teal">Donde los Sueños se Entrenan</span>
+            </h2>
+            <p class="futbol-text">
+              Para mí el fútbol no es solo un pasatiempo: es lo que me mueve, lo que enciende mi corazón y lo que más disfruto hacer en mis tiempos libres. Cuando me pongo los botines y piso el césped, todo se transforma en adrenalina pura, concentración y ganas de superarme.
+            </p>
+            <p class="futbol-text">
+              <strong>Mi sueño más grande es ser futbolista profesional.</strong> Sé que el camino exige sacrificio, entrenamiento continuo, mentalidad inquebrantable y juego en equipo, pero cada jugada y cada gota de sudor me acercan a esa meta. Con el número 7 en la espalda, miro el balón fijamente porque en cada toque veo mi futuro.
+            </p>
+
+            <div class="futbol-skills">
+              <div class="skill-meter">
+                <div class="skill-info">
+                  <span>Velocidad y Desborde</span>
+                  <span>95%</span>
+                </div>
+                <div class="meter-bar"><div class="meter-fill" style="width: 95%;"></div></div>
+              </div>
+
+              <div class="skill-meter">
+                <div class="skill-info">
+                  <span>Pasión y Garra</span>
+                  <span>100%</span>
+                </div>
+                <div class="meter-bar"><div class="meter-fill" style="width: 100%;"></div></div>
+              </div>
+
+              <div class="skill-meter">
+                <div class="skill-info">
+                  <span>Tiro y Definición</span>
+                  <span>90%</span>
+                </div>
+                <div class="meter-bar"><div class="meter-fill" style="width: 90%;"></div></div>
+              </div>
+            </div>
+
+            <div class="futbol-action-btn">
+              <a href="#juego-penales" class="btn btn-primary">
+                <span>¡Ponte a prueba en los penales!</span>
+                <span class="btn-emoji">🎯</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="futbol-media">
+            <div class="futbol-img-frame">
+              <img src="assets/images/futbol.jpg" alt="Juan Pablo en la cancha con uniforme azul y amarillo mirando el balón rojo" class="futbol-img">
+              <div class="futbol-card-badge">
+                <span class="jersey-num">#7</span>
+                <div class="jersey-info">
+                  <strong>Club Deportivo</strong>
+                  <small>Foco en la pelota, mirada en el arco</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MI CÍRCULO: FAMILIA, GATOS, AMIGOS -->
+    <section class="section circulo-section" id="mi-circulo">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Mis Pilares</span>
+          <h2 class="section-title">Mi <span class="text-teal">Círculo Sagrado</span></h2>
+          <p class="section-description">
+            Las personas y los amores que me llenan el corazón de alegría, paz y motivación diaria.
+          </p>
+        </div>
+
+        <!-- Filter tabs for circle -->
+        <div class="circulo-tabs">
+          <button class="c-tab active" data-target="all">Todos</button>
+          <button class="c-tab" data-target="familia">❤️ Familia</button>
+          <button class="c-tab" data-target="amor">💖 El Amor de Mi Vida</button>
+          <button class="c-tab" data-target="gatos">🐱 Michu & Mike</button>
+          <button class="c-tab" data-target="amigos">🤝 Amigos</button>
+        </div>
+
+        <div class="circulo-grid" id="circuloGrid">
+          <!-- CARD FAMILIA -->
+          <div class="circulo-card" data-category="familia">
+            <div class="circulo-card-img-wrap">
+              <img src="assets/images/familia.jpg" alt="Juan Pablo con su familia en parque de diversiones con montaña rusa" class="circulo-img">
+              <span class="cat-pill pill-red">❤️ Mi Familia</span>
+            </div>
+            <div class="circulo-card-body">
+              <h3>Amo a Mi Familia</h3>
+              <p>
+                Son mi pilar fundamental y mi mayor bendición. Cada momento juntos, desde un día lleno de adrenalina en los parques de atracciones hasta una charla en la mesa, me llena de gratitud. Su amor y apoyo incondicional son el motor que me impulsa a luchar por cada uno de mis sueños.
+              </p>
+              <div class="card-quote">
+                "La familia es el equipo que nunca te deja solo en la cancha de la vida."
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD GATOS -->
+          <div class="circulo-card" data-category="gatos">
+            <div class="circulo-card-img-wrap">
+              <img src="assets/images/gatos.jpg" alt="Dos gatos durmiendo plácidamente en el sofá, uno naranja y uno blanco" class="circulo-img">
+              <span class="cat-pill pill-teal">🐱 Michu & Mike</span>
+            </div>
+            <div class="circulo-card-body">
+              <h3>Michu y Mike: Mis Dos Amores</h3>
+              <p>
+                Mis dos gatos son pura ternura y tranquilidad. Siempre que llego a casa cansado de entrenar o de estudiar, verlos dormir juntos en el sofá o recibir sus ronroneos me cambia el día por completo. Son parte esencial de mi hogar y de mi felicidad.
+              </p>
+              
+              <!-- Interactive Pet Button -->
+              <div class="pet-interaction">
+                <button class="btn-pet" id="petCatsBtn">
+                  <span>🐾 Consentir a Michu y Mike</span>
+                  <span class="pet-counter-badge" id="purrCounter">0 mimos</span>
+                </button>
+                <p class="pet-note" id="petMessage">Haz clic para acariciarlos y escuchar su ronroneo 😻</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD AMIGOS -->
+          <div class="circulo-card" data-category="amigos">
+            <div class="circulo-card-img-wrap">
+              <img src="assets/images/amigos.jpg" alt="Juan Pablo con su grupo de amigos del colegio en una selfie tomada desde arriba" class="circulo-img">
+              <span class="cat-pill pill-blue">🤝 Mis Amigos</span>
+            </div>
+            <div class="circulo-card-body">
+              <h3>Tiempo con Mis Amigos</h3>
+              <p>
+                Me encanta pasar tiempo con mis amigos porque a su lado me desconecto, me relajo y me río sin parar. Esas risas espontáneas, las bromas después del colegio y los recuerdos que creamos juntos son de los tesoros más grandes de mi juventud.
+              </p>
+              <div class="card-quote">
+                "Un buen rato con los amigos recarga el alma y borra cualquier estrés."
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD EL AMOR DE MI VIDA -->
+          <div class="circulo-card" data-category="amor">
+            <div class="circulo-card-img-wrap">
+              <img src="assets/images/momentos.jpg" alt="Juan Pablo con el amor de su vida, a quien conoce desde que tiene 12 años" class="circulo-img">
+              <span class="cat-pill pill-pink">💖 El Amor de Mi Vida</span>
+            </div>
+            <div class="circulo-card-body">
+              <h3>El Amor de Mi Vida</h3>
+              <p>
+                El amor de mi vida, con la que quiero cumplir todos mis sueños, a la que amo con toda mi alma y a la que conozco desde que tengo 12 años. Ella es mi inspiración, mi apoyo incondicional y la persona más especial con quien comparto y construyo cada ilusión.
+              </p>
+              <div class="card-quote">
+                "Con ella quiero cumplir cada uno de mis sueños; amarla con toda mi alma es mi mayor certeza."
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOBBIES & GUSTOS: BENTO GRID -->
+    <section class="section hobbies-section" id="hobbies">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Estilo de Vida</span>
+          <h2 class="section-title">Lo Que Me Gusta y <span class="text-teal">Me Mueve</span></h2>
+          <p class="section-description">
+            Desde la emoción de los videojuegos hasta la adrenalina de las montañas rusas y el buen cine.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- BENTO 1: XBOX & FC 26 -->
+          <div class="bento-card bento-wide bento-xbox">
+            <div class="bento-bg-glow"></div>
+            <div class="bento-content">
+              <div class="bento-badge-group">
+                <span class="bento-tag tag-xbox">🎮 XBOX SERIES</span>
+                <span class="bento-tag tag-fc">⚽ FC 26</span>
+              </div>
+              <h3 class="bento-title">Fanático de los Videojuegos & FC 26</h3>
+              <p class="bento-desc">
+                Cuando no estoy con el balón en la cancha real, me gusta competir en mi Xbox. Mi juego preferido por excelencia es el <strong>FC 26</strong>: armar tácticas, sentir la emoción de un partido parejo, meter golazos al último minuto y disfrutar torneos con amigos.
+              </p>
+
+              <!-- Interactive Controller Mini Widget -->
+              <div class="xbox-interactive-box">
+                <p class="xbox-prompt">Presiona un botón del mando para ver mis jugadas:</p>
+                <div class="controller-buttons">
+                  <button class="c-btn btn-btn-a" data-action="Pase filtrado y velocidad por la banda con el #7">A</button>
+                  <button class="c-btn btn-btn-b" data-action="¡Disparo colocado al ángulo superior derecho! ⚽🔥">B</button>
+                  <button class="c-btn btn-btn-x" data-action="Centro preciso al corazón del área">X</button>
+                  <button class="c-btn btn-btn-y" data-action="Pase al vacío letal para el mano a mano">Y</button>
+                </div>
+                <div class="controller-feedback" id="controllerFeedback">
+                  Toca A, B, X o Y para probar mi estilo de juego en FC 26.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BENTO 2: PARQUES & PISCINAS -->
+          <div class="bento-card bento-adventures">
+            <div class="bento-badge-group">
+              <span class="bento-tag">🎢 Adrenalina</span>
+              <span class="bento-tag">🏊 Piscinas</span>
+            </div>
+            <h3 class="bento-title">Diversión & Desconexión</h3>
+            <p class="bento-desc">
+              Me fascina la emoción de ir a <strong>parques de diversiones</strong>, subirme a montañas rusas y sentir la velocidad al máximo. También me encanta estar en <strong>piscinas</strong> nadando, relajándome bajo el sol y disfrutando del agua con mi familia y amigos.
+            </p>
+            <div class="adventures-icons">
+              <span class="adv-bubble" title="Montañas rusas">🎢</span>
+              <span class="adv-bubble" title="Piscinas refrescantes">🌊</span>
+              <span class="adv-bubble" title="Sol y diversión">☀️</span>
+              <span class="adv-bubble" title="Amigos y risas">🎉</span>
+            </div>
+          </div>
+
+          <!-- BENTO 3: STRANGER THINGS -->
+          <div class="bento-card bento-cinema">
+            <div class="bento-badge-group">
+              <span class="bento-tag tag-st">📺 SERIE FAVORITA</span>
+            </div>
+            <h3 class="bento-title">Stranger Things</h3>
+            <p class="bento-desc">
+              Mi serie favorita número uno. La ambientación de los años 80, la música de sintetizadores, la camaradería inquebrantable de los chicos en Hawkins y todo el misterio del <em>Upside Down</em> hacen que sea una obra maestra que me atrapa de principio a fin.
+            </p>
+            <div class="st-lights-bar">
+              <span class="st-bulb red"></span>
+              <span class="st-bulb blue"></span>
+              <span class="st-bulb yellow"></span>
+              <span class="st-bulb green"></span>
+              <span class="st-bulb purple"></span>
+              <span class="st-bulb teal"></span>
+            </div>
+          </div>
+
+          <!-- BENTO 4: CREED Y AVENGERS -->
+          <div class="bento-card bento-movies">
+            <div class="bento-badge-group">
+              <span class="bento-tag tag-movie">🥊 TRILOGÍA CREED</span>
+              <span class="bento-tag tag-avengers">🛡️ AVENGERS</span>
+            </div>
+            <h3 class="bento-title">Cine: Creed & Avengers</h3>
+            <p class="bento-desc">
+              <strong>Trilogía de Creed:</strong> Me inspira profundamente por su mensaje de superación, disciplina férrea y levantarse sin importar cuántas veces caigas. <br>
+              <strong>Avengers:</strong> La escala épica del universo de héroes, el trabajo en equipo y salvar el mundo con valor.
+            </p>
+            <div class="cinema-quote">
+              "No se trata de qué tan fuerte golpees, sino de qué tan fuerte puedas ser golpeado y seguir adelante."
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METAS Y SUEÑOS DEL FUTURO -->
+    <section class="section metas-section" id="metas">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Mirando Hacia Adelante</span>
+          <h2 class="section-title">Mis Grandes <span class="text-teal">Metas y Sueños</span></h2>
+          <p class="section-description">
+            Los horizontes que construyo día a día con estudio, trabajo duro y visión.
+          </p>
+        </div>
+
+        <div class="metas-timeline">
+          <!-- META 1 -->
+          <div class="meta-item">
+            <div class="meta-dot">⚽</div>
+            <div class="meta-box">
+              <span class="meta-badge">Deporte de Alto Rendimiento</span>
+              <h3>Ser Futbolista Profesional</h3>
+              <p>
+                Debutar en un club profesional, competir al máximo nivel, ganar títulos y representar con orgullo mi pasión. Dejar mi huella en el fútbol profesional con el número 7.
+              </p>
+              <div class="meta-checklist">
+                <span>✔ Entrenamientos físicos continuos</span>
+                <span>✔ Disciplina táctica y mental</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- META 2 -->
+          <div class="meta-item">
+            <div class="meta-dot">🏎️</div>
+            <div class="meta-box">
+              <span class="meta-badge">Carrera Universitaria</span>
+              <h3>Estudiar Ingeniería Automotriz</h3>
+              <p>
+                Los motores, la velocidad, la mecánica de alto rendimiento y la innovación tecnológica me apasionan. Mi meta académica es formarme como Ingeniero Automotriz para diseñar, preparar y evolucionar los vehículos del futuro.
+              </p>
+              <div class="meta-checklist">
+                <span>✔ Preparación académica sólida</span>
+                <span>✔ Pasión por la tecnología y los motores</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- META 3 -->
+          <div class="meta-item">
+            <div class="meta-dot">✈️</div>
+            <div class="meta-box">
+              <span class="meta-badge">Experiencias y Horizontes</span>
+              <h3>Viajar por Todo el Mundo</h3>
+              <p>
+                Conocer los mejores estadios del planeta, recorrer ciudades icónicas de Europa, América y Asia, descubrir nuevas culturas, sabores y paisajes inolvidables.
+              </p>
+              <div class="meta-checklist">
+                <span>✔ Visitar míticos templos del fútbol</span>
+                <span>✔ Coleccionar recuerdos en cada rincón</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- META 4 -->
+          <div class="meta-item">
+            <div class="meta-dot">🏡</div>
+            <div class="meta-box">
+              <span class="meta-badge">Proyecto de Vida</span>
+              <h3>Formar una Hermosa Familia</h3>
+              <p>
+                En el futuro, construir un hogar fundamentado en el amor, el respeto, la protección mutua y los valores que mis padres me han inculcado con tanto cariño.
+              </p>
+              <div class="meta-checklist">
+                <span>✔ Crear momentos llenos de unión y felicidad</span>
+                <span>✔ Ser un ejemplo de lealtad y esfuerzo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZONA INTERACTIVA: PENALES Y TRIVIA -->
+    <section class="section interactivo-section" id="interactivo">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Diversión en Vivo</span>
+          <h2 class="section-title">Zona <span class="text-teal">Interactiva</span></h2>
+          <p class="section-description">
+            ¡Ponte los botines para patear penales con Juan Pablo o pon a prueba qué tan bien lo conoces en la trivia!
+          </p>
+        </div>
+
+        <!-- JUEGO DE PENALES -->
+        <div class="game-wrapper" id="juego-penales">
+          <div class="game-card">
+            <div class="game-header">
+              <div class="game-title-group">
+                <span class="game-badge">MINI JUEGO 3D VIBE</span>
+                <h3>⚽ Desafío de Tiros Libres & Penales</h3>
+                <p>Haz clic o toca la portería para disparar. ¡Engaña al portero y anota un golazo al ángulo!</p>
+              </div>
+
+              <div class="game-scoreboard">
+                <div class="score-card">
+                  <span class="score-label">GOLES</span>
+                  <span class="score-value" id="gameGoals">0</span>
+                </div>
+                <div class="score-card">
+                  <span class="score-label">TIROS</span>
+                  <span class="score-value" id="gameShots">0</span>
+                </div>
+                <div class="score-card highlight">
+                  <span class="score-label">RACHA</span>
+                  <span class="score-value" id="gameStreak">0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Soccer Goal Pitch -->
+            <div class="pitch-container" id="pitchArea">
+              <div class="goal-posts">
+                <div class="crossbar"></div>
+                <div class="post post-left"></div>
+                <div class="post post-right"></div>
+                <div class="goal-net"></div>
+                
+                <!-- Target zones (Top left, top right, bottom left, bottom right, center) -->
+                <div class="goal-target target-tl" data-zone="tl" title="Ángulo superior izquierdo">🎯</div>
+                <div class="goal-target target-tr" data-zone="tr" title="Ángulo superior derecho">🎯</div>
+                <div class="goal-target target-bl" data-zone="bl" title="Raso izquierdo">🎯</div>
+                <div class="goal-target target-br" data-zone="br" title="Raso derecho">🎯</div>
+                <div class="goal-target target-c" data-zone="c" title="Centro potente">🎯</div>
+
+                <!-- Goalkeeper avatar -->
+                <div class="goalkeeper" id="goalkeeper">
+                  <div class="gk-body">
+                    <div class="gk-head"></div>
+                    <div class="gk-torso">🧤</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ball on penalty spot -->
+              <div class="penalty-spot">
+                <div class="ball" id="soccerBall">
+                  <div class="ball-pattern">⚽</div>
+                </div>
+                <span class="spot-marker"></span>
+              </div>
+
+              <!-- Shot result message banner -->
+              <div class="shot-message" id="shotMessage"></div>
+            </div>
+
+            <div class="game-footer">
+              <p class="game-tip">💡 <strong>Tip de Juan Pablo:</strong> "Apunta a las esquinas superiores para un tiro imposible para el arquero."</p>
+              <button class="btn btn-secondary btn-sm" id="resetGameBtn">Reiniciar Marcador</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRIVIA INTERACTIVA -->
+        <div class="trivia-wrapper" id="trivia">
+          <div class="trivia-card">
+            <div class="trivia-header">
+              <span class="trivia-badge">DESAFÍO DE CONOCIMIENTO</span>
+              <h3>¿Cuánto conoces a Juan Pablo?</h3>
+              <p>Responde a estas preguntas y descubre si eres un verdadero conocedor de su vida y sus pasiones.</p>
+            </div>
+
+            <div class="trivia-progress-bar">
+              <div class="progress-fill" id="triviaProgress" style="width: 20%;"></div>
+            </div>
+
+            <div class="trivia-body" id="triviaContainer">
+              <!-- Dynamically rendered by trivia.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MURO DE MENSAJES Y BUENOS DESEOS -->
+    <section class="section mensajes-section" id="mensajes">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Comunidad & Cariño</span>
+          <h2 class="section-title">Déjale un Mensaje a <span class="text-teal">Juan Pablo</span></h2>
+          <p class="section-description">
+            Envía tus palabras de apoyo, felicitaciones o un saludo que se sumará al muro de la página.
+          </p>
+        </div>
+
+        <div class="grid-2-col guestbook-layout">
+          <!-- Form -->
+          <div class="guestbook-form-card">
+            <h3>Escribe tu Dedicatoria</h3>
+            <form id="messageForm">
+              <div class="form-group">
+                <label for="senderName">Tu Nombre o Apodo:</label>
+                <input type="text" id="senderName" placeholder="Ej: Camilo, Tía Martha, Compañero del equipo..." required maxlength="40">
+              </div>
+
+              <div class="form-group">
+                <label for="relationship">Relación / Vínculo:</label>
+                <select id="relationship">
+                  <option value="💖 El Amor de Mi Vida">💖 El Amor de Mi Vida</option>
+                  <option value="⚽ Compañero de Fútbol">⚽ Compañero de Fútbol</option>
+                  <option value="🏫 Amigo del Colegio Currea Manrique">🏫 Amigo del Colegio Currea Manrique</option>
+                  <option value="❤️ Familia">❤️ Familia</option>
+                  <option value="🎮 Rival en FC 26">🎮 Rival en FC 26</option>
+                  <option value="✨ Admirador / Amigo">✨ Admirador / Amigo</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="messageText">Tu Mensaje de Apoyo:</label>
+                <textarea id="messageText" rows="4" placeholder="Ej: ¡Muchos éxitos en la cancha Juan Pablo, vas a ser un crack profesional!" required maxlength="300"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <span>Publicar Mensaje en el Muro</span>
+                <span class="btn-emoji">🚀</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Message Wall Feed -->
+          <div class="guestbook-feed-card">
+            <div class="feed-header">
+              <h3>Muro de Mensajes en Vivo</h3>
+              <span class="feed-count" id="messageCount">4 Mensajes</span>
+            </div>
+            <div class="feed-list" id="messageList">
+              <!-- Initial messages dynamically handled or rendered by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="brand-monogram">JP</span>
+        <div>
+          <h3>Juan Pablo</h3>
+          <p>Colegio María Currea Manrique • Pasión, Fútbol & Familia</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Inicio</a>
+        <a href="#sobre-mi">Sobre Mí</a>
+        <a href="#futbol">Fútbol</a>
+        <a href="#mi-circulo">Mi Círculo</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#metas">Metas</a>
+        <a href="#interactivo">Juegos</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Juan Pablo. Diseñado con fondo negro y azul cerceta con toda la energía y dedicación.</p>
+        <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Photos -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar modal">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImg">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Audio Synthesizer & Main Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/soccer-game.js"></script>
+  <script src="js/trivia.js"></script>
+</body>
+</html>
